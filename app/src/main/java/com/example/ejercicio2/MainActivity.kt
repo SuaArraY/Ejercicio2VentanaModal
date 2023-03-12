@@ -38,15 +38,17 @@ class MainActivity : AppCompatActivity() {
         var nume2: Double = num2.text.toString().toDouble()
 
         if (nume1 > nume2){
-            mensaje = "El primer numero es mayor" + nume1
+            mensaje =  " El numero mayor es: " + nume1
+        }else if(nume2 > nume1){
+            mensaje = " El numero mayor es: " + nume2
         }else{
-            mensaje = "El segundo numero es mayor" + nume2
+            mensaje = "Los numeros son iguales"
         }
     }
 
     private fun showBasicDialog(view: View?) {
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("Alert")
+        builder.setTitle("La comparacion es:")
         builder.setMessage(mensaje)
         builder.show()
     }
