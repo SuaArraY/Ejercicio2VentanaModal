@@ -44,6 +44,8 @@ class MainActivity : AppCompatActivity() {
         }else{
             mensaje = "Los numeros son iguales"
         }
+        limpiar()
+
     }
 
     private fun showBasicDialog(view: View?) {
@@ -51,6 +53,11 @@ class MainActivity : AppCompatActivity() {
         builder.setTitle("La comparacion es:")
         builder.setMessage(mensaje)
         builder.show()
+    }
+
+    private fun limpiar(){
+        num1.setText("")
+        num2.setText("")
     }
 
 
